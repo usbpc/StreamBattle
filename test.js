@@ -26,9 +26,9 @@ socket.on('new-event', function(data){
 });
 
 state.display();
-getOldData(0);
+//getOldData(0);
 
-function State(username = 'usbpc', maxHealth = 500, currHealth = 333) {
+function State(username = 'Nur_so_lp', maxHealth = 2485, currHealth = 2485) {
 	this.username = username;
 	this.maxHealth = maxHealth;
 	this.currHealth = currHealth;
