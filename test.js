@@ -14,7 +14,7 @@ var loaded = false;
 var gotEarly = [];
 var ids = new Set();
 
-var socket = io('https://sso.tipeeestream.com:8443');
+var socket = io('https://sso-cf.tipeeestream.com');
 socket.emit('join-room', {room: apiKey, username: apiName});
 socket.on('new-event', function(data){
 	if (loaded) {
