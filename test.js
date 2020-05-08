@@ -14,7 +14,12 @@ var loaded = false;
 var gotEarly = [];
 var ids = new Set();
 
-var socket = io('https://proxy.holm.dev');
+let socket = io('https://sso-cf.tipeeestream.com:443', {
+  query: {
+    access_token: apiKey
+  }
+})
+
 socket.emit('join-room', {room: apiKey, username: apiName});
 socket.on('new-event', function(data){
 	if (loaded) {
